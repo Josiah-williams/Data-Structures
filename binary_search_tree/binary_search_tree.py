@@ -24,8 +24,14 @@ class BSTNode:
                 # create new left node
                 self.left = BSTNode(value)
             else:
+                self.left.insert(value)
+        else:
+
+            if not self.right:
                 #insert the value on the left
-                self.right = BSTNode(value)
+             self.right = BSTNode(value)
+            else:
+                self.right.insert(value)
 
     # Return True if the tree contains the value
     # False if it does not
